@@ -1,0 +1,3 @@
+[submodule "steam-user-service"]
+	path = steam-user-service
+	url = https://github.com/oxunPy/steam-user-service.git
