@@ -1,3 +1,24 @@
 [submodule "steam-user-service"]
 	path = steam-user-service
 	url = https://github.com/oxunPy/steam-user-service.git
+[submodule "steam-game-service"]
+	path = steam-game-service
+	url = https://github.com/oxunPy/steam-game-service.git
+[submodule "steam-store-service"]
+	path = steam-store-service
+	url = https://github.com/oxunPy/steam-store-service.git
+[submodule "steam-library-service"]
+	path = steam-library-service
+	url = https://github.com/oxunPy/steam-library-service.git
+[submodule "steam-chat-service"]
+	path = steam-chat-service
+	url = https://github.com/oxunPy/steam-chat-service.git
+[submodule "steam-matchmaking-service"]
+	path = steam-matchmaking-service
+	url = https://github.com/oxunPy/steam-matchmaking-service.git
+[submodule "steam-review-service"]
+	path = steam-review-service
+	url = https://github.com/oxunPy/steam-review-service.git
+[submodule "steam-notification-service"]
+	path = steam-notification-service
+	url = https://github.com/oxunPy/steam-notification-service.git
