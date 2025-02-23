@@ -1,10 +1,10 @@
-package org.example.steamanalogue;
+package org.example.apigateway;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SteamAnalogueApplicationTests {
+class ApiGatewayApplicationTests {
 
     @Test
     void contextLoads() {
