@@ -14,21 +14,6 @@ import java.util.List;
 @SpringBootApplication
 @EnableDiscoveryClient
 public class ApiGatewayApplication {
-
-//    @Bean
-//    public WebConfigurer webMvcConfigurer() {
-//        return new WebMvcConfigurer() {
-//            @Override
-//            public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/**")
-//                        .allowedMethods("*")
-//                        .allowedHeaders("*")
-//                        .allowedOrigins("*");
-//            }
-//        };
-//    }
-
-
     public static void main(String[] args) {
         SpringApplication.run(ApiGatewayApplication.class, args);
     }
