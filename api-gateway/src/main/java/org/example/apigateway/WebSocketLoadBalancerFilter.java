@@ -27,9 +27,25 @@ public class WebSocketLoadBalancerFilter implements GlobalFilter, Ordered {
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        return Flux.fromIterable(discoveryClient.getInstances("steam-chat-service"))
+        String requestPath = exchange.getRequest().getURI().getRawPath();
+        String serviceName;
+        String healthEndpoint;
+
+        // Determine target service based on the request path
+        if(requestPath.startsWith("ws/chat")) {
+            serviceName = "steam-chat-service";
+            healthEndpoint = "/chat/health/connections";
+        } else if(requestPath.startsWith("ws/match")) {
+            serviceName = "steam-matchmaking-service";
+            healthEndpoint = "/steam-matchmaking/health/connections";
+        } else {
+            return chain.filter(exchange);
+        }
+
+
+        return Flux.fromIterable(discoveryClient.getInstances(serviceName))
                 .flatMap(instance -> webClient.get()
-                        .uri(instance.getUri() + "/chat/health/connections")
+                        .uri(instance.getUri() + healthEndpoint)
                         .retrieve()
                         .bodyToMono(Integer.class)
                         .map(connections -> new AbstractMap.SimpleEntry<>(instance, connections)))

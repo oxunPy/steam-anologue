@@ -24,19 +24,4 @@ public class CorsConfig {
         source.registerCorsConfiguration("/**", corsConfig); // Apply to all paths
         return source;
     }
-
-//    @Bean
-//    public CorsWebFilter corsWebFilter() {
-//        CorsConfiguration corsConfig = new CorsConfiguration();
-//        corsConfig.setAllowedOrigins(List.of("*"));
-//        corsConfig.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
-//        corsConfig.setAllowedHeaders(List.of("*"));
-//        corsConfig.setAllowCredentials(true);
-//
-//        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-//        source.registerCorsConfiguration("/**", corsConfig);
-//
-//        return new CorsWebFilter(source);
-//
-//    }
 }
