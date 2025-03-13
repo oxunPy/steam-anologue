@@ -1,2 +1,2 @@
 # steam-anologue
-Steam Analogue Microservice Not distributed to the public. It is for only myself!!!
+Steam Analogue Microservice. It is for only myself!!!
