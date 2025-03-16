@@ -38,7 +38,12 @@ public class WebSocketLoadBalancerFilter implements GlobalFilter, Ordered {
         } else if(requestPath.startsWith("ws/match")) {
             serviceName = "steam-matchmaking-service";
             healthEndpoint = "/steam-matchmaking/health/connections";
-        } else {
+        }
+        else if(requestPath.startsWith("ws/game")) {
+            serviceName = "steam-game-service";
+            healthEndpoint = "steam-game/health/connections";
+        }
+        else {
             return chain.filter(exchange);
         }
 
